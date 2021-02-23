@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 s.name              = "ZCPeriodTimePickView"
 
 #更新代码必须修改版本号
-s.version           = "0.0.1"
+s.version           = "1.0.0"
 s.summary           = "Time period selection"
 s.description       = <<-DESC
 It is a ZCPeriodTimePickView used on iOS, which implement by Objective-C.

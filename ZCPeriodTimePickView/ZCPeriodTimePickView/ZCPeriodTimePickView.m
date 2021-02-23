@@ -135,7 +135,9 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UILabel *)view {
     //隐藏两条黑线
     [[pickerView.subviews objectAtIndex:1] setHidden:YES];
-    [[pickerView.subviews objectAtIndex:2] setHidden:YES];
+    if (!@available(iOS 14, *)) {
+        [[pickerView.subviews objectAtIndex:2] setHidden:YES];
+    }
     if (!view) {
         view = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, RowH, RowH)];
         view.textAlignment = NSTextAlignmentCenter;
